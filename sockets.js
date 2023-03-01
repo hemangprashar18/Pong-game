@@ -1,6 +1,6 @@
 let readyPlayerCount = 0;
 
-// make io obj available bt passing it in parameter as a function
+// make io obj available by passing it in parameter as a function
 function listen(io){
     // creating new namespace
     const pongNamespace = io.of('/pong');
