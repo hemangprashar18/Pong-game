@@ -1,6 +1,6 @@
 let readyPlayerCount = 0;
 
-// make io obj available bt passing it in parameter as a function
+// make io obj available by passing it in parameter as a function
 function listen(io){
     // creating new namespace
     const pongNamespace = io.of('/pong');
@@ -13,7 +13,7 @@ pongNamespace.on('connection',(socket) => {
 
     socket.on('ready', () => {
         // when to create a room
-        room = 'room' + Math.floor(readyPlayerCount / 2) ; 
+        room = 'room' + Math.floor(readyPlayerCount / 2) ;   // Math.floor rounds to nearest integer
         // divided by 2 coz each 2 players will have one room
         socket.join(room);
         console.log('Player ready',socket.id, room);
